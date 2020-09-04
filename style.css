@@ -1,0 +1,89 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('./image/background-farm.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header img {
+    object-fit: contain;
+    width: 150px;
+}
+
+h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 48px;
+    line-height: 48px;
+    color: #F8F4CE;
+    -webkit-text-fill-color: #EEE5EA;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #703030;
+    margin-left: 32px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin: 16px auto auto;
+    justify-content: center;
+}
+
+button {
+    width: 280px;
+    padding: 32px;
+    background: radial-gradient(50% 50% at 50% 50%, #D4EC74 0%, #B9E212 100%);
+    border-radius: 7px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+button img {
+    width: 100px;
+}
+
+button span {
+    width: 56px;
+    height: 56px;
+    background: #EEE5EA;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-family: Luckiest Guy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 48px;
+    color: #000000;
+}
+
+@media (max-width: 720px) {
+    header {
+        flex-direction: column;
+        margin: 32px 0;
+        height: auto;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 32px;
+    }
+}
