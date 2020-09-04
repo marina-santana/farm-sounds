@@ -61,6 +61,9 @@ button img {
 }
 
 button span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 56px;
     height: 56px;
     background: #EEE5EA;
