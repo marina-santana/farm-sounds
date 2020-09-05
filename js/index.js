@@ -1,9 +1,9 @@
-$('.tooltip').on('mouseover', function () {
+$('.tooltip').on('mouseover, touchstart', function () {
     var mouse = event.pageX;
     $(this).append("<style>.tooltip::after { left: " + mouse + "px; }</style>");
 });
 
-$('.tooltip').on('mouseout', function () {
+$('.tooltip').on('mouseout touchend', function () {
     $('.tooltip style').remove();
 });
 
