@@ -12,7 +12,12 @@
 
 <body>
     <header>
-        <img src="./image/barn.png" alt="celeiro">
+        <span class="tooltip" data-title="Párabens você encontrou o easter egg">
+            <img id="img-barn" class="tooltip" data-title="Párabens você encontrou o easter egg" src="./image/barn.png"
+                alt="celeiro">
+            <audio id="barn" src="./sounds/barn.mp3"></audio>
+        </span>
+
         <h1>aperte a tecla ou clique no botão</h1>
     </header>
 
@@ -49,24 +54,9 @@
         <audio id="k" src="sounds/horse.mp3"></audio>
     </div>
 
-    <script type="text/javascript" src="./jquery-3.5.1.min.js"></script>
-    <script type="text/javascript" src="./mousetrap.min.js"></script>
-    <script type="text/javascript">
-
-        $('button').on('click', function () {
-            let next = $(this).next().attr('id')
-
-            sound = document.getElementById(next);
-
-            sound.play();
-        });
-
-        Mousetrap.bind('a', function () { document.getElementById('a').play(); });
-        Mousetrap.bind('w', function () { document.getElementById('w').play(); });
-        Mousetrap.bind('y', function () { document.getElementById('y').play(); });
-        Mousetrap.bind('v', function () { document.getElementById('v').play(); });
-        Mousetrap.bind('f', function () { document.getElementById('f').play(); });
-        Mousetrap.bind('k', function () { document.getElementById('k').play(); });
+    <script type="text/javascript" src="./js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="./js/mousetrap.min.js"></script>
+    <script type="text/javascript" src="./js/index.js">
     </script>
 </body>
 

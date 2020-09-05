@@ -78,6 +78,35 @@ button span {
     color: #000000;
 }
 
+.tooltip {
+    text-decoration: underline;
+}
+
+.tooltip::after {
+    content: attr(data-title);
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(0, 10px);
+    max-width: 200px;
+    font-size: 18px;
+    line-height: 1.4em;
+    font-family: Helvetica, sans-serif;
+    background: #703030;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 2px;
+    z-index: 1;
+}
+
+.tooltip:hover::after {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 5px);
+    transition: all .2s ease;
+}
+
 @media (max-width: 720px) {
     header {
         flex-direction: column;
